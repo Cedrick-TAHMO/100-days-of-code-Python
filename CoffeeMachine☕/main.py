@@ -1,3 +1,16 @@
+########################################################################
+#                            Coffee Machine                            #
+# ----------------------------------------------------------------------#
+# A Python program simulating a coffee vending machine.               #
+# Features:                                                           #
+#  - Serves espresso, latte, and cappuccino.                          #
+#  - Tracks ingredient usage and ensures sufficiency before brewing.  #
+#  - Accepts coin payments and provides change if needed.             #
+#  - Displays resource reports on request.                            #
+# ----------------------------------------------------------------------#                                                  #
+# Python Version: 3.13.2                                              #
+# ----------------------------------------------------------------------#
+
 MENU = {
     "espresso": {
         "ingredients": {
@@ -27,7 +40,7 @@ MENU = {
 def is_resources_sufficient(order_ingredients):
     """Returns True when order can be made, False if ingredients are insufficient."""
     for item in order_ingredients:
-        if order_ingredients[item] >= resource[item]:
+        if order_ingredients[item] > resource[item]:
             print(f"Sorry there is not enough {item}.")
             return False
     return True
@@ -77,10 +90,12 @@ while is_on:
     elif choice == "report":
         print(f"Water: {resource['water']}ml")
         print(f"Milk: {resource['milk']}ml")
-        print(f"Coffer: {resource['coffee']}g")
+        print(f"Coffee: {resource['coffee']}g")
         print(f"Money: ${profit}")
     elif choice == 'menu':
-        print("On the Menu: \n1. Espresso \n2. Latte \n3. Cappuccino")
+        print("On the Menu:")
+        for drink in MENU:
+            print(f"- {drink.title()}")
     else:
         drink = MENU[choice]
         if is_resources_sufficient(drink["ingredients"]):
