@@ -31,8 +31,8 @@ def setup_screen():
 
 def setup_game_objects():
     """Initialize all game objects."""
-    paddle_right = Paddle(PADDLE_DISTANCE, 0)
-    paddle_left = Paddle(-PADDLE_DISTANCE, 0)
+    paddle_right = Paddle(PADDLE_DISTANCE, 0, "pink")
+    paddle_left = Paddle(-PADDLE_DISTANCE, 0, "green")
     ball = Ball()
     scoreboard = Scoreboard()
     return paddle_right, paddle_left, ball, scoreboard
@@ -41,8 +41,8 @@ def setup_controls(screen, paddle_right, paddle_left):
     """Configure game controls for both players."""
     screen.listen()
     # Right paddle controls (Arrow keys)
-    screen.onkey(paddle_right.up, "Up")
-    screen.onkey(paddle_right.down, "Down")
+    screen.onkey(paddle_right.up, "p")
+    screen.onkey(paddle_right.down, "l")
     # Left paddle controls (W/S keys)
     screen.onkey(paddle_left.up, "w")
     screen.onkey(paddle_left.down, "s")
@@ -72,8 +72,8 @@ def main():
             ball.bounce_y()
 
         # Paddle collision detection
-        if ((ball.distance(paddle_right) < COLLISION_DISTANCE and ball.xcor() > 320) or 
-            (ball.distance(paddle_left) < COLLISION_DISTANCE and ball.xcor() < -320)):
+        if ((ball.distance(paddle_right) < COLLISION_DISTANCE and ball.xcor() > 340) or
+            (ball.distance(paddle_left) < COLLISION_DISTANCE and ball.xcor() < -340)):
             ball.bounce_x()
             game_speed = max(game_speed - SPEED_INCREMENT, 0.01)
 

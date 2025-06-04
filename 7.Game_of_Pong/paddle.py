@@ -15,7 +15,7 @@ class Paddle(Turtle):
     PADDLE_WIDTH = 1
     PADDLE_HEIGHT = 6
 
-    def __init__(self, x_pos, y_pos):
+    def __init__(self, x_pos, y_pos, color):
         """
         Initialize a new paddle.
         
@@ -25,7 +25,7 @@ class Paddle(Turtle):
         """
         super().__init__()
         self.shape("square")
-        self.color("white")
+        self.color(color)
         self.shapesize(stretch_wid=self.PADDLE_HEIGHT, stretch_len=self.PADDLE_WIDTH)
         self.penup()
         self.initial_x = x_pos
