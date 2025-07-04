@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 Mile to Kilometer Converter
 A simple GUI application to convert miles to kilometers using tkinter.

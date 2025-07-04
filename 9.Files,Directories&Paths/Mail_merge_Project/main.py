@@ -1,5 +1,5 @@
 # Create a letter using starting_letter.txt for each name in invite_names.txt
-#Replace the [name} placeholder with the actual name.
+#Replace the [name] placeholder with the actual name.
 #Save the letters in the folder "ReadyToSend"
 import os
 
@@ -8,7 +8,7 @@ letter_template_path = "../Mail_merge_Project/Input/Letters/starting_letter.txt"
 names_path = "../Mail_merge_Project/Input/Names/invited_names.txt"
 output_folder = "../Mail_merge_Project/ReadyToSend"
 
-# Create output folder if it doesn't exist
+# Create an output folder if it doesn't exist
 os.makedirs(output_folder, exist_ok=True)
 
 # Read the template

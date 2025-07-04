@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 Snake Game Main Module
 This is the main entry point for the Snake Game. It handles the game loop,

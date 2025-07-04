@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 Pong Game Main Module
 A classic two-player Pong game implementation using Python's turtle graphics.

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 Coffee Machine Simulator
 
@@ -8,9 +8,6 @@ This module simulates a coffee vending machine that can:
 - Track resources
 - Generate reports
 
-Author: Your Name
-Version: 1.0.0
-Python Version: 3.13.2
 """
 
 # Constants for drink recipes and their costs

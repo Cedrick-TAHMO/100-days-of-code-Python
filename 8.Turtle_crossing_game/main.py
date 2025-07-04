@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 Turtle Crossing Game
 A game where the player needs to cross a busy road while avoiding cars.
