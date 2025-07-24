@@ -1,6 +1,5 @@
 from turtle import Screen
 import turtle
-
 import pandas
 
 from data import Data
@@ -45,4 +44,5 @@ while game_is_on:
 
     if data_set.all_states_found():
         print("Congratulations! You've found all the states!!")
+        game_is_on = False
 turtle.mainloop()
